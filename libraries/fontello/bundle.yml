@@ -1,0 +1,44 @@
+bundles:
+  fontello:
+    - fontello
+
+packages:
+  fontello:
+    # vendor make sence only when multiple packages used
+    # in single package, modules become "shared" automatically
+    #vendor:
+    #  - lodash
+    #  - knockout
+    #  - async
+
+    client:
+      main: client/system/main.js
+      include: client/**.js
+      exclude: /(^|\/)_.*/
+
+    views:
+      include: client/**.jade
+      exclude: /(^|\/)_.*/
+
+    i18n_client:
+      include: client/**i18n/*.yml
+
+    styles:
+      main: client/system/main.styl
+      include: client/**.styl
+
+    server:
+      include: server/**.js
+      exclude: /(^|\/)_.*/
+
+    i18n_server:
+      include: server/**i18n/*.yml
+
+    bin:
+      root: assets
+      include:
+        - loader.js.ejs
+        - vendor/json2/json2.js
+        - vendor/es5-shim/es5-shim.js
+        - icons/src/font/*
+        - embedded_fonts/*

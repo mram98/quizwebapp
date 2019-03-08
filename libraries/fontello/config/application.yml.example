@@ -1,0 +1,67 @@
+# Flag to check, that you have not fogot to create (rename) config
+#
+configured: true
+
+
+# Options - different kind of constants, to keep root space clear
+#
+options:
+
+  # # Cache location for differend needs (styles compiler, mincer, ...),
+  # # anyone can create additional subfolders there.
+  # # Path is relative to main app's root. By default - './.cache'
+  # #
+  # cache_dir: ./.cache
+
+
+# Locales
+#
+locales:
+
+  # Application locale used by default (first enabled one if not set).
+  #
+  default: en-US
+
+  # # List of enabled locales (all found locales by default).
+  # enabled:
+  #   - en-US
+  #   - en-GB
+  #   - ru-RU
+
+
+# Listening options
+#
+bind:
+  default:
+    listen: 0.0.0.0:3000
+
+  # SYNOPSIS:
+  #
+  # <apiPath>:
+  #   mount: [<proto>:][//[<host>][:<port>]][/<path>]
+  #   listen: <address>[:<port = 80>]
+  #   ssl:
+  #     key:  /path/to/file.key   # Path might be absolute
+  #     cert: /path/to/file.cert  # or relative to the main app
+  #
+  # SSL EXAMPLE:
+  #
+  # default:
+  #   listen: 0.0.0.0:3000
+  #   mount:  https://localhost:3000
+  #   ssl:
+  #     key:  ./etc/server.key
+  #     cert: ./etc/server.cert
+  #
+
+
+  # ACTION, WHEN REQUESTED HOST IS UNKNOWN
+  #
+  # _ is a special keyword that hold function called when hostname is not
+  # supposed to be served by server listener, by default 404 not found:
+  #
+  #_: !!js/function |
+  #  function (req, res) {
+  #    res.writeHead(404, { 'Content-Type': 'text/plain' });
+  #    res.end('Invalid host ' + req.headers.host);
+  #  }

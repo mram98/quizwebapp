@@ -1,0 +1,136 @@
+@import "../../_variables"
+
+
+.toolbar-container
+  position relative
+  background-color #fcfcfc
+  padding-top 10px
+  padding-bottom 10px
+  margin-bottom 10px
+  border-bottom 1px solid #eee;
+
+.btn-toolbar
+  margin 0
+
+.toolbar__size-slider
+  width 150px
+  display inline-block
+  float left
+  // return common view
+  box-shadow none !important
+  border-color transparent !important
+  background-color transparent
+
+/*
+#glyph-size-slider
+  width: 100px
+  display inline-block
+  float: left
+  margin-top 15px
+  margin-left .5em
+*/
+.toolbar__size-indicator
+  display inline-block
+  float  left
+  line-height 34px
+  margin 0 1em 0 0
+  color #666
+  font-size 11px
+
+//
+// Search tweak
+//
+
+.search-form
+  .icon-search
+    border-top-left-radius 20px
+    border-bottom-left-radius 20px
+  input
+    border-top-right-radius 20px !important
+    border-bottom-right-radius 20px !important
+
+.search-permalink
+  padding-left 4px
+  padding-right 4px
+
+//
+// Settings menu
+//
+.toolbar__settings-menu
+  min-width 200px
+  .checkbox
+    margin-top 5px
+    input
+      margin-right 5px
+      vertical-align text-bottom
+  label
+    margin-bottom 2px
+    font-weight normal
+
+/*
+ * jQuery UI Slider 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+/*
+.ui-slider
+  position relative
+  text-align left
+
+  border 1px solid
+  border-color #bbb #bbb #ddd #ddd
+  border-radius 1em
+  background #ddd
+  background-image linear-gradient(to bottom, #bbb 0%, #fff 80%, #ddd 100%)
+
+  // fix toolbar fontsize reset
+  font-size 14px
+
+.ui-slider .ui-slider-handle
+  position absolute
+  z-index 2
+  width 1.2em
+  height 1.2em
+  cursor default
+
+  border-radius 2em
+  border 1px solid #aaa
+  background #aaa
+  background-image linear-gradient(to bottom, #fff 0%, #eee 50%, #aaa 100%)
+
+  outline none
+
+  &:after
+    position absolute
+    content ""
+    width .5em
+    height .5em
+    top .30em
+    left .30em
+    // background-color #000
+    border-radius 1em
+    box-shadow 0 0.2em 0.15em #888888 inset
+
+
+
+.ui-slider .ui-slider-range
+  display none;
+
+.ui-slider-horizontal
+  height .4em
+
+  .ui-slider-handle
+    top -.45em
+    margin-left -.6em
+  .ui-slider-range
+    top 0
+    height 100%
+  .ui-slider-range-min
+    left 0
+  .ui-slider-range-max
+    right 0
+*/
